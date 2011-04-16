@@ -12,7 +12,7 @@
   
 ; Page for upvoting an otter
 (defn page-upvote-otter [id] (let [my-id id]
-  (upvote-sqlite id)                               
+  (upvote-otter id)                               
   (str (html [:h1 "Upvoted otter id=" my-id]) (page-compare-otters))))
 
 ; Page for uploading an otter
@@ -23,6 +23,12 @@
                  [:input {:name "submit" :type "submit" :value "submit"}]]]
         [:p "Or click " [:a {:href "/"} "here" ] "to vote on some otters"]))
 
-
-; Page for downvoting an otter
-(defn page-downvote-otter [id] (html [:h1 "Downvoting otter id=" id ]))
+; Page for showing otter votes
+(defn page-otter-votes [] 
+  (let []
+    (.info (get-logger) (str "Otters: " @otter-votes-r))
+    (html [:h1 "Otter Votes" ]
+          [:div#votes.otter-votes 
+            (for [x (keys @otter-votes-r)] 
+              [:p [:img {:src (str "/img/" (get otter-pics x))} ]  (get @otter-votes-r x)  ]
+            ) ])))

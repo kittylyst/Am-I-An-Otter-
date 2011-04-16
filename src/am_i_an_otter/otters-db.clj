@@ -57,15 +57,23 @@
 ; otter-pics maps integer ids to filenames
 (def otter-pics (deref (scan-for-otters (ref {}))))
 
-(defn otter-exists [id] (contains? (keys otter-pics) id))
+; otter-votes stores the votes
+(def otter-votes-r (ref {}))
+
+(defn otter-exists [id] (contains? (set (keys otter-pics)) id))
+
+; Votes up an otter
+(defn alter-otter-upvote [vote-map id] 
+  (assoc vote-map id (+ 1 (let [cur-votes (get vote-map id)]
+    (if (nil? cur-votes) 0 cur-votes)))))
 
 ; Fn for upvoting an otter in the DB
-(defn upvote-sqlite [id]
+(defn upvote-otter [id]
   (if (otter-exists id) 
     (let [my-id id]
-      (.info (get-logger) (str "Upvoted Otter " id))                           
-      nil) ; stubbed out for now
-    nil))
+      (.info (get-logger) (str "Upvoted Otter " my-id)) 
+      (dosync (alter otter-votes-r alter-otter-upvote my-id) otter-votes-r))
+    (.info (get-logger) (str "Otter " id " Not Found " otter-pics))))
 
 ; Function returns a random id for an otter
 (defn random-otter [] (rand-nth (keys otter-pics)))

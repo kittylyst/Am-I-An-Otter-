@@ -9,8 +9,8 @@
                                               com.sun.jmx/jmxri]]
                  [org.slf4j/slf4j-api "1.5.6"]
                  [org.slf4j/slf4j-log4j12 "1.5.6"]
-                 [org.xerial/sqlite-jdbc "3.6.16"]
                  [hiccup "0.3.4"]]
   :dev-dependencies [[lein-ring "0.4.0"]]
-  :source-path "src"
+  ;:source-path "src"
+  :repl-init am-i-an-otter.core
   :ring {:handler am-i-an-otter.core/app})
