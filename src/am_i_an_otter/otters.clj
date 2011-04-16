@@ -8,6 +8,7 @@
   (html [:h1 "Otters say 'Hello Compojure!'"] 
         [:p [:a {:href (str "/upvote/" otter1)} [:img {:src (str "/img/" (get otter-pics otter1))} ]]]
         [:p [:a {:href (str "/upvote/" otter2)} [:img {:src (str "/img/" (get otter-pics otter2))} ]]]
+        [:p "Click " [:a {:href "/votes"} "here"] " to see the votes for each otter"]
         [:p "Click " [:a {:href "/upload"} "here"] " to upload a brand new otter"])))
   
 ; Page for upvoting an otter
@@ -21,7 +22,7 @@
         [:p [:form {:action "/add_otter" :method "POST" :enctype "multipart/form-data"} 
                  [:input {:name "file" :type "file" :size "20"}] 
                  [:input {:name "submit" :type "submit" :value "submit"}]]]
-        [:p "Or click " [:a {:href "/"} "here" ] "to vote on some otters"]))
+        [:p "Or click " [:a {:href "/"} "here" ] " to vote on some otters"]))
 
 ; Page for showing otter votes
 (defn page-otter-votes [] 
