@@ -1,0 +1,14 @@
+# am-i-an-otter
+
+Sample Compojure Web Application - uses SQLite and so forth to provide a simple
+voting system for ranking otters.
+
+## Usage
+
+Demonstration, teaching, etc. Please hack on as you will.
+
+## License
+
+Copyright (C) 2010 FIXME
+
+Distributed under the Eclipse Public License, the same as Clojure.

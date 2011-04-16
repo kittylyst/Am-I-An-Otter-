@@ -1,0 +1,269 @@
+2011-04-06 09:33:29,637 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@404f39a3
+2011-04-06 09:33:29,639 INFO  [clojure.core] Otter1 = 1 ; Otter2 = 1
+2011-04-06 09:33:29,640 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 09:33:29,654 DEBUG [org.mortbay.log] REQUEST /img/1 on org.mortbay.jetty.HttpConnection@404f39a3
+2011-04-06 09:33:29,657 DEBUG [org.mortbay.log] RESPONSE /img/1  404
+2011-04-06 09:35:32,527 DEBUG [org.mortbay.log] EOF
+2011-04-06 13:39:38,150 INFO  [org.mortbay.log] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2011-04-06 13:39:38,152 DEBUG [org.mortbay.log] Container Server@40aeb11d + SocketConnector@0.0.0.0:3000 as connector
+2011-04-06 13:39:38,153 DEBUG [org.mortbay.log] Container Server@40aeb11d + AbstractHandler$0@5f556649 as handler
+2011-04-06 13:39:38,153 INFO  [org.mortbay.log] jetty-6.1.26
+2011-04-06 13:39:38,165 DEBUG [org.mortbay.log] Container Server@40aeb11d + org.mortbay.thread.QueuedThreadPool@4c6cb02a as threadpool
+2011-04-06 13:39:38,167 DEBUG [org.mortbay.log] started org.mortbay.thread.QueuedThreadPool@4c6cb02a
+2011-04-06 13:39:38,167 DEBUG [org.mortbay.log] starting AbstractHandler$0@5f556649
+2011-04-06 13:39:38,168 DEBUG [org.mortbay.log] started AbstractHandler$0@5f556649
+2011-04-06 13:39:38,168 DEBUG [org.mortbay.log] starting Server@40aeb11d
+2011-04-06 13:39:38,172 INFO  [org.mortbay.log] Started SocketConnector@0.0.0.0:3000
+2011-04-06 13:39:38,172 DEBUG [org.mortbay.log] started SocketConnector@0.0.0.0:3000
+2011-04-06 13:39:38,173 DEBUG [org.mortbay.log] started Server@40aeb11d
+2011-04-06 13:39:38,779 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@1679fcb8
+2011-04-06 13:39:38,797 INFO  [clojure.core] Otter1 =  ; Otter2 = 
+2011-04-06 13:39:38,819 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 13:39:38,826 DEBUG [org.mortbay.log] REQUEST /img/ on org.mortbay.jetty.HttpConnection@1679fcb8
+2011-04-06 13:39:38,903 DEBUG [org.mortbay.log] RESPONSE /img/  500
+2011-04-06 13:39:44,669 DEBUG [org.mortbay.log] REQUEST /upload on org.mortbay.jetty.HttpConnection@1679fcb8
+2011-04-06 13:39:44,671 DEBUG [org.mortbay.log] RESPONSE /upload  200
+2011-04-06 13:39:51,766 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@1679fcb8
+2011-04-06 13:39:51,830 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-bite.jpg", :size 148442, :content-type "image/jpeg", :tempfile #<File /tmp/upload__2f1645f0_12f2ad33bf3__8000_00000000.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------175634682614292054992006352758", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-bite.jpg", :size 148442, :content-type "image/jpeg", :tempfile #<File /tmp/upload__2f1645f0_12f2ad33bf3__8000_00000000.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/upload", "content-type" "multipart/form-data; boundary=---------------------------175634682614292054992006352758", "accept-encoding" "gzip,deflate", "content-length" "148786", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 148786, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@3907f838>} ; New name = 5a18f0e5-6568-48ea-b816-22d55ac04762.jpg ; New id = 1
+2011-04-06 13:39:51,893 DEBUG [org.mortbay.log] RESPONSE /add_otter  500
+2011-04-06 13:40:56,891 INFO  [org.mortbay.log] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2011-04-06 13:40:56,893 DEBUG [org.mortbay.log] Container Server@14bea80e + SocketConnector@0.0.0.0:3000 as connector
+2011-04-06 13:40:56,894 DEBUG [org.mortbay.log] Container Server@14bea80e + AbstractHandler$0@17fdee7e as handler
+2011-04-06 13:40:56,894 INFO  [org.mortbay.log] jetty-6.1.26
+2011-04-06 13:40:56,906 DEBUG [org.mortbay.log] Container Server@14bea80e + org.mortbay.thread.QueuedThreadPool@517a6426 as threadpool
+2011-04-06 13:40:56,908 DEBUG [org.mortbay.log] started org.mortbay.thread.QueuedThreadPool@517a6426
+2011-04-06 13:40:56,909 DEBUG [org.mortbay.log] starting AbstractHandler$0@17fdee7e
+2011-04-06 13:40:56,909 DEBUG [org.mortbay.log] started AbstractHandler$0@17fdee7e
+2011-04-06 13:40:56,909 DEBUG [org.mortbay.log] starting Server@14bea80e
+2011-04-06 13:40:56,914 INFO  [org.mortbay.log] Started SocketConnector@0.0.0.0:3000
+2011-04-06 13:40:56,914 DEBUG [org.mortbay.log] started SocketConnector@0.0.0.0:3000
+2011-04-06 13:40:56,914 DEBUG [org.mortbay.log] started Server@14bea80e
+2011-04-06 13:40:57,107 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@21c60684
+2011-04-06 13:40:57,123 INFO  [clojure.core] Otter1 =  ; Otter2 = 
+2011-04-06 13:40:57,146 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 13:40:57,153 DEBUG [org.mortbay.log] REQUEST /img/ on org.mortbay.jetty.HttpConnection@21c60684
+2011-04-06 13:40:57,229 DEBUG [org.mortbay.log] RESPONSE /img/  500
+2011-04-06 13:43:02,635 DEBUG [org.mortbay.log] EOF
+2011-04-06 13:55:32,042 DEBUG [org.mortbay.log] REQUEST /upload on org.mortbay.jetty.HttpConnection@3b88bc85
+2011-04-06 13:55:32,045 DEBUG [org.mortbay.log] RESPONSE /upload  200
+2011-04-06 13:55:35,490 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@3b88bc85
+2011-04-06 13:55:35,548 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "", :size 0, :content-type "application/octet-stream", :tempfile #<File /tmp/upload_66468ea8_12f2ad46fce__8000_00000000.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------54373064819299020141161849277", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "", :size 0, :content-type "application/octet-stream", :tempfile #<File /tmp/upload_66468ea8_12f2ad46fce__8000_00000000.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/upload", "content-type" "multipart/form-data; boundary=---------------------------54373064819299020141161849277", "accept-encoding" "gzip,deflate", "content-length" "341", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 341, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@3907f838>} ; New name = 9f494d2c-25b7-4f56-b01e-166afb1f2d10.jpg ; New id = 1
+2011-04-06 13:55:35,606 DEBUG [org.mortbay.log] RESPONSE /add_otter  500
+2011-04-06 13:55:41,610 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@3b88bc85
+2011-04-06 13:55:41,619 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-bite.jpg", :size 148442, :content-type "image/jpeg", :tempfile #<File /tmp/upload_66468ea8_12f2ad46fce__8000_00000002.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------161440990716503707081423340252", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-bite.jpg", :size 148442, :content-type "image/jpeg", :tempfile #<File /tmp/upload_66468ea8_12f2ad46fce__8000_00000002.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/upload", "content-type" "multipart/form-data; boundary=---------------------------161440990716503707081423340252", "accept-encoding" "gzip,deflate", "content-length" "148786", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 148786, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@3907f838>} ; New name = 884054e8-234e-438b-99c7-56629ec8415d.jpg ; New id = 1
+2011-04-06 13:55:41,671 DEBUG [org.mortbay.log] RESPONSE /add_otter  500
+2011-04-06 13:57:47,643 DEBUG [org.mortbay.log] EOF
+2011-04-06 13:58:57,156 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@7fe47c41
+2011-04-06 13:58:57,158 INFO  [clojure.core] Otter1 =  ; Otter2 = 
+2011-04-06 13:58:57,159 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 13:58:57,172 DEBUG [org.mortbay.log] REQUEST /img/ on org.mortbay.jetty.HttpConnection@7fe47c41
+2011-04-06 13:58:57,207 DEBUG [org.mortbay.log] RESPONSE /img/  500
+2011-04-06 13:58:58,761 DEBUG [org.mortbay.log] REQUEST /upload on org.mortbay.jetty.HttpConnection@7fe47c41
+2011-04-06 13:58:58,763 DEBUG [org.mortbay.log] RESPONSE /upload  200
+2011-04-06 13:59:03,106 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@7fe47c41
+2011-04-06 13:59:03,112 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-paws.jpg", :size 89503, :content-type "image/jpeg", :tempfile #<File /tmp/upload_66468ea8_12f2ad46fce__8000_00000004.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------4484105649067197581866153420", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-paws.jpg", :size 89503, :content-type "image/jpeg", :tempfile #<File /tmp/upload_66468ea8_12f2ad46fce__8000_00000004.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/upload", "content-type" "multipart/form-data; boundary=---------------------------4484105649067197581866153420", "accept-encoding" "gzip,deflate", "content-length" "89841", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 89841, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@37e66f47>} ; New name = 1397ae3c-e158-493d-b3a1-5b914b922726.jpg ; New id = 1
+2011-04-06 13:59:03,156 DEBUG [org.mortbay.log] RESPONSE /add_otter  500
+2011-04-06 13:59:31,131 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@7fe47c41
+2011-04-06 13:59:31,187 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-paws.jpg", :size 89503, :content-type "image/jpeg", :tempfile #<File /tmp/upload_66468ea8_12f2ad46fce__8000_00000006.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------4484105649067197581866153420", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-paws.jpg", :size 89503, :content-type "image/jpeg", :tempfile #<File /tmp/upload_66468ea8_12f2ad46fce__8000_00000006.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/upload", "content-type" "multipart/form-data; boundary=---------------------------4484105649067197581866153420", "cache-control" "max-age=0", "accept-encoding" "gzip,deflate", "content-length" "89841", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 89841, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@37e66f47>} ; New name = b91fa71b-82ee-4869-ae01-9d9640986fd7.jpg ; New id = 1
+2011-04-06 13:59:31,190 DEBUG [org.mortbay.log] RESPONSE /add_otter  200
+2011-04-06 13:59:47,154 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@7fe47c41
+2011-04-06 13:59:47,198 DEBUG [org.mortbay.log] RESPONSE /add_otter  500
+2011-04-06 13:59:57,883 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@7fe47c41
+2011-04-06 13:59:57,967 DEBUG [org.mortbay.log] RESPONSE /add_otter  500
+2011-04-06 14:00:11,605 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@7fe47c41
+2011-04-06 14:00:11,687 DEBUG [org.mortbay.log] RESPONSE /add_otter  500
+2011-04-06 14:00:18,558 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@7fe47c41
+2011-04-06 14:00:18,637 DEBUG [org.mortbay.log] RESPONSE /add_otter  500
+2011-04-06 14:01:32,982 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@7fe47c41
+2011-04-06 14:01:33,029 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-bite.jpg", :size 148442, :content-type "image/jpeg", :tempfile #<File /tmp/upload_66468ea8_12f2ad46fce__8000_00000016.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------204486799219034438051216294901", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-bite.jpg", :size 148442, :content-type "image/jpeg", :tempfile #<File /tmp/upload_66468ea8_12f2ad46fce__8000_00000016.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/add_otter", "content-type" "multipart/form-data; boundary=---------------------------204486799219034438051216294901", "cache-control" "max-age=0", "accept-encoding" "gzip,deflate", "content-length" "148786", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 148786, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@37e66f47>} ; New name = 95fe677f-b60e-43c1-895e-a8f48b78aaa9.jpg ; New id = 1
+2011-04-06 14:01:33,031 DEBUG [org.mortbay.log] RESPONSE /add_otter  200
+2011-04-06 14:01:38,604 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@7fe47c41
+2011-04-06 14:01:38,609 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-shakes-hand.jpg", :size 30084, :content-type "image/jpeg", :tempfile #<File /tmp/upload_66468ea8_12f2ad46fce__8000_00000018.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------469265728245743282069312544", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-shakes-hand.jpg", :size 30084, :content-type "image/jpeg", :tempfile #<File /tmp/upload_66468ea8_12f2ad46fce__8000_00000018.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/add_otter", "content-type" "multipart/form-data; boundary=---------------------------469265728245743282069312544", "accept-encoding" "gzip,deflate", "content-length" "30426", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 30426, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@37e66f47>} ; New name = 30227d6f-294a-451d-9694-8a37b9909c33.jpg ; New id = 2
+2011-04-06 14:01:38,611 DEBUG [org.mortbay.log] RESPONSE /add_otter  200
+2011-04-06 14:01:40,768 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@7fe47c41
+2011-04-06 14:01:40,770 INFO  [clojure.core] Otter1 = 2 ; Otter2 = 1
+2011-04-06 14:01:40,771 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 14:01:40,779 DEBUG [org.mortbay.log] REQUEST /img/2 on org.mortbay.jetty.HttpConnection@7fe47c41
+2011-04-06 14:01:40,781 DEBUG [org.mortbay.log] REQUEST /img/1 on org.mortbay.jetty.HttpConnection@2fbb7466
+2011-04-06 14:01:40,783 DEBUG [org.mortbay.log] RESPONSE /img/2  404
+2011-04-06 14:01:40,784 DEBUG [org.mortbay.log] RESPONSE /img/1  404
+2011-04-06 14:01:42,635 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@7fe47c41
+2011-04-06 14:01:42,637 INFO  [clojure.core] Otter1 = 2 ; Otter2 = 2
+2011-04-06 14:01:42,637 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 14:01:42,645 DEBUG [org.mortbay.log] REQUEST /img/2 on org.mortbay.jetty.HttpConnection@2fbb7466
+2011-04-06 14:01:42,647 DEBUG [org.mortbay.log] RESPONSE /img/2  404
+2011-04-06 14:03:47,640 DEBUG [org.mortbay.log] EOF
+2011-04-06 14:03:47,640 DEBUG [org.mortbay.log] EOF
+2011-04-06 14:40:13,467 INFO  [org.mortbay.log] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2011-04-06 14:40:13,469 DEBUG [org.mortbay.log] Container Server@374598d4 + SocketConnector@0.0.0.0:3000 as connector
+2011-04-06 14:40:13,470 DEBUG [org.mortbay.log] Container Server@374598d4 + AbstractHandler$0@55a21c7d as handler
+2011-04-06 14:40:13,470 INFO  [org.mortbay.log] jetty-6.1.26
+2011-04-06 14:40:13,482 DEBUG [org.mortbay.log] Container Server@374598d4 + org.mortbay.thread.QueuedThreadPool@1296dee6 as threadpool
+2011-04-06 14:40:13,484 DEBUG [org.mortbay.log] started org.mortbay.thread.QueuedThreadPool@1296dee6
+2011-04-06 14:40:13,485 DEBUG [org.mortbay.log] starting AbstractHandler$0@55a21c7d
+2011-04-06 14:40:13,485 DEBUG [org.mortbay.log] started AbstractHandler$0@55a21c7d
+2011-04-06 14:40:13,485 DEBUG [org.mortbay.log] starting Server@374598d4
+2011-04-06 14:40:13,489 INFO  [org.mortbay.log] Started SocketConnector@0.0.0.0:3000
+2011-04-06 14:40:13,490 DEBUG [org.mortbay.log] started SocketConnector@0.0.0.0:3000
+2011-04-06 14:40:13,490 DEBUG [org.mortbay.log] started Server@374598d4
+2011-04-06 14:40:13,706 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:40:13,721 INFO  [clojure.core] Otter1 =  ; Otter2 = 
+2011-04-06 14:40:13,743 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 14:40:13,750 DEBUG [org.mortbay.log] REQUEST /img/ on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:40:13,809 DEBUG [org.mortbay.log] RESPONSE /img/  500
+2011-04-06 14:40:36,267 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:40:36,328 INFO  [clojure.core] Otter1 =  ; Otter2 = 
+2011-04-06 14:40:36,329 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 14:40:36,336 DEBUG [org.mortbay.log] REQUEST /img/ on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:40:36,384 DEBUG [org.mortbay.log] RESPONSE /img/  500
+2011-04-06 14:40:51,944 DEBUG [org.mortbay.log] REQUEST /upload on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:40:51,947 DEBUG [org.mortbay.log] RESPONSE /upload  200
+2011-04-06 14:40:56,889 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:40:56,951 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-bite.jpg", :size 148442, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000000.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------20911544239641433201820974922", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-bite.jpg", :size 148442, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000000.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/upload", "content-type" "multipart/form-data; boundary=---------------------------20911544239641433201820974922", "accept-encoding" "gzip,deflate", "content-length" "148783", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 148783, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@464d02ee>} ; New name = 6d6f1e23-1f6e-45e0-aa84-876251d09daa.jpg ; New id = 1
+2011-04-06 14:40:56,956 DEBUG [org.mortbay.log] RESPONSE /add_otter  200
+2011-04-06 14:41:01,082 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:41:01,087 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-paws.jpg", :size 89503, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000002.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------211387837226447473621427288", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-paws.jpg", :size 89503, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000002.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/add_otter", "content-type" "multipart/form-data; boundary=---------------------------211387837226447473621427288", "accept-encoding" "gzip,deflate", "content-length" "89838", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 89838, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@464d02ee>} ; New name = f0875b52-b5f1-4282-9dad-a358bfae0aa6.jpg ; New id = 2
+2011-04-06 14:41:01,089 DEBUG [org.mortbay.log] RESPONSE /add_otter  200
+2011-04-06 14:41:04,425 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:41:04,465 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-shakes-hand.jpg", :size 30084, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000004.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------1896638339348390471536446302", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-shakes-hand.jpg", :size 30084, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000004.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/add_otter", "content-type" "multipart/form-data; boundary=---------------------------1896638339348390471536446302", "accept-encoding" "gzip,deflate", "content-length" "30429", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 30429, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@464d02ee>} ; New name = 3c755c24-e44a-4692-826a-a56da1a8d321.jpg ; New id = 3
+2011-04-06 14:41:04,467 DEBUG [org.mortbay.log] RESPONSE /add_otter  200
+2011-04-06 14:41:05,705 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:41:05,707 INFO  [clojure.core] Otter1 = 2 ; Otter2 = 2
+2011-04-06 14:41:05,707 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 14:41:05,715 DEBUG [org.mortbay.log] REQUEST /img/2 on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:41:05,719 DEBUG [org.mortbay.log] RESPONSE /img/2  404
+2011-04-06 14:41:55,345 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:41:55,401 INFO  [clojure.core] Otter1 =  ; Otter2 = 
+2011-04-06 14:41:55,402 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 14:41:55,409 DEBUG [org.mortbay.log] REQUEST /img/ on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:41:55,451 DEBUG [org.mortbay.log] RESPONSE /img/  500
+2011-04-06 14:42:43,250 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:42:43,301 INFO  [clojure.core] Otter1 =  ; Otter2 =  ; {}
+2011-04-06 14:42:43,302 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 14:42:43,309 DEBUG [org.mortbay.log] REQUEST /img/ on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:42:43,351 DEBUG [org.mortbay.log] RESPONSE /img/  500
+2011-04-06 14:43:12,024 DEBUG [org.mortbay.log] REQUEST /upload on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:43:12,027 DEBUG [org.mortbay.log] RESPONSE /upload  200
+2011-04-06 14:43:17,329 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:43:17,335 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-bite.jpg", :size 148442, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000006.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------3378597981608934360625503291", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-bite.jpg", :size 148442, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000006.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/upload", "content-type" "multipart/form-data; boundary=---------------------------3378597981608934360625503291", "accept-encoding" "gzip,deflate", "content-length" "148780", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 148780, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@464d02ee>} ; New name = 703ccdaa-e6a7-4fd2-a044-388d9365bb63.jpg ; New id = 1
+2011-04-06 14:43:17,338 DEBUG [org.mortbay.log] RESPONSE /add_otter  200
+2011-04-06 14:43:24,128 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:43:24,130 INFO  [clojure.core] Otter1 = 1 ; Otter2 = 1 ; {1 "703ccdaa-e6a7-4fd2-a044-388d9365bb63.jpg"}
+2011-04-06 14:43:24,131 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 14:43:24,139 DEBUG [org.mortbay.log] REQUEST /img/703ccdaa-e6a7-4fd2-a044-388d9365bb63.jpg on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:43:24,148 DEBUG [org.mortbay.log] RESPONSE /img/703ccdaa-e6a7-4fd2-a044-388d9365bb63.jpg  200
+2011-04-06 14:43:28,568 DEBUG [org.mortbay.log] REQUEST /upload on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:43:28,570 DEBUG [org.mortbay.log] RESPONSE /upload  200
+2011-04-06 14:43:33,177 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:43:33,182 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-paws.jpg", :size 89503, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000008.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------14972500348751190662439763", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-paws.jpg", :size 89503, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000008.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/upload", "content-type" "multipart/form-data; boundary=---------------------------14972500348751190662439763", "accept-encoding" "gzip,deflate", "content-length" "89835", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 89835, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@464d02ee>} ; New name = 2378aebe-1db1-407b-b688-40f3af102f4a.jpg ; New id = 2
+2011-04-06 14:43:33,184 DEBUG [org.mortbay.log] RESPONSE /add_otter  200
+2011-04-06 14:43:36,953 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:43:36,957 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-shakes-hand.jpg", :size 30084, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000010.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------152881079114943063541740321989", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-shakes-hand.jpg", :size 30084, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000010.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/add_otter", "content-type" "multipart/form-data; boundary=---------------------------152881079114943063541740321989", "accept-encoding" "gzip,deflate", "content-length" "30435", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 30435, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@464d02ee>} ; New name = 0942b69f-556b-47fc-ada4-f4785b28f3d9.jpg ; New id = 3
+2011-04-06 14:43:36,959 DEBUG [org.mortbay.log] RESPONSE /add_otter  200
+2011-04-06 14:43:37,960 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:43:37,962 INFO  [clojure.core] Otter1 = 3 ; Otter2 = 1 ; {3 "0942b69f-556b-47fc-ada4-f4785b28f3d9.jpg", 2 "2378aebe-1db1-407b-b688-40f3af102f4a.jpg", 1 "703ccdaa-e6a7-4fd2-a044-388d9365bb63.jpg"}
+2011-04-06 14:43:37,963 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 14:43:37,971 DEBUG [org.mortbay.log] REQUEST /img/0942b69f-556b-47fc-ada4-f4785b28f3d9.jpg on org.mortbay.jetty.HttpConnection@31496fdf
+2011-04-06 14:43:37,974 DEBUG [org.mortbay.log] REQUEST /img/703ccdaa-e6a7-4fd2-a044-388d9365bb63.jpg on org.mortbay.jetty.HttpConnection@14a569f0
+2011-04-06 14:43:37,975 DEBUG [org.mortbay.log] RESPONSE /img/0942b69f-556b-47fc-ada4-f4785b28f3d9.jpg  200
+2011-04-06 14:43:37,978 DEBUG [org.mortbay.log] RESPONSE /img/703ccdaa-e6a7-4fd2-a044-388d9365bb63.jpg  200
+2011-04-06 14:45:32,638 DEBUG [org.mortbay.log] EOF
+2011-04-06 14:45:32,638 DEBUG [org.mortbay.log] EOF
+2011-04-06 14:46:30,970 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:46:31,021 INFO  [clojure.core] Otter1 =  ; Otter2 =  ; {}
+2011-04-06 14:46:31,023 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 14:46:31,030 DEBUG [org.mortbay.log] REQUEST /img/ on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:46:31,064 DEBUG [org.mortbay.log] RESPONSE /img/  500
+2011-04-06 14:46:36,630 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:46:36,632 INFO  [clojure.core] Otter1 =  ; Otter2 =  ; {}
+2011-04-06 14:46:36,633 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 14:46:36,640 DEBUG [org.mortbay.log] REQUEST /img/ on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:46:36,674 DEBUG [org.mortbay.log] RESPONSE /img/  500
+2011-04-06 14:46:38,000 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:46:38,003 INFO  [clojure.core] Otter1 =  ; Otter2 =  ; {}
+2011-04-06 14:46:38,004 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 14:46:38,011 DEBUG [org.mortbay.log] REQUEST /img/ on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:46:38,044 DEBUG [org.mortbay.log] RESPONSE /img/  500
+2011-04-06 14:46:45,575 DEBUG [org.mortbay.log] REQUEST /upload on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:46:45,577 DEBUG [org.mortbay.log] RESPONSE /upload  200
+2011-04-06 14:46:51,032 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:46:51,039 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-bite.jpg", :size 148442, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000012.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------3268042771163968039895452751", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-bite.jpg", :size 148442, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000012.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/upload", "content-type" "multipart/form-data; boundary=---------------------------3268042771163968039895452751", "accept-encoding" "gzip,deflate", "content-length" "148780", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 148780, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@43d98539>} ; New name = a56fdb74-a3e7-41f0-917f-40449e16f646.jpg ; New id = 1
+2011-04-06 14:46:51,041 DEBUG [org.mortbay.log] RESPONSE /add_otter  200
+2011-04-06 14:46:54,960 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:46:54,966 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-paws.jpg", :size 89503, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000014.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------5290338854236227751474705559", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-paws.jpg", :size 89503, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000014.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/add_otter", "content-type" "multipart/form-data; boundary=---------------------------5290338854236227751474705559", "accept-encoding" "gzip,deflate", "content-length" "89841", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 89841, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@43d98539>} ; New name = fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg ; New id = 2
+2011-04-06 14:46:54,968 DEBUG [org.mortbay.log] RESPONSE /add_otter  200
+2011-04-06 14:46:58,952 DEBUG [org.mortbay.log] REQUEST /add_otter on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:46:58,995 INFO  [clojure.core] {:remote-addr "127.0.0.1", :scheme :http, :query-params {}, :session {}, :form-params {}, :multipart-params {"submit" "submit", "file" {:filename "ottah-shakes-hand.jpg", :size 30084, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000016.tmp>}}, :request-method :post, :query-string nil, :route-params {}, :content-type "multipart/form-data; boundary=---------------------------321014104837380240642789141", :cookies {}, :uri "/add_otter", :server-name "127.0.0.1", :params {:file {:filename "ottah-shakes-hand.jpg", :size 30084, :content-type "image/jpeg", :tempfile #<File /tmp/upload__9663c71_12f2b0ab46d__8000_00000016.tmp>}, :submit "submit"}, :headers {"user-agent" "Mozilla/5.0 (X11; U; Linux x86_64; en-GB; rv:1.9.2.16) Gecko/20110323 Ubuntu/10.04 (lucid) Firefox/3.6.16", "keep-alive" "115", "accept-charset" "ISO-8859-1,utf-8;q=0.7,*;q=0.7", "accept" "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "host" "127.0.0.1:3000", "referer" "http://127.0.0.1:3000/add_otter", "content-type" "multipart/form-data; boundary=---------------------------321014104837380240642789141", "accept-encoding" "gzip,deflate", "content-length" "30426", "accept-language" "en-gb,en;q=0.5", "connection" "keep-alive"}, :content-length 30426, :server-port 3000, :character-encoding nil, :body #<Input org.mortbay.jetty.HttpParser$Input@43d98539>} ; New name = 2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg ; New id = 3
+2011-04-06 14:46:58,996 DEBUG [org.mortbay.log] RESPONSE /add_otter  200
+2011-04-06 14:47:00,159 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:00,161 INFO  [clojure.core] Otter1 = 2 ; Otter2 = 2 ; {3 "2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg", 2 "fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg", 1 "a56fdb74-a3e7-41f0-917f-40449e16f646.jpg"}
+2011-04-06 14:47:00,162 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-06 14:47:00,170 DEBUG [org.mortbay.log] REQUEST /img/fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:00,174 DEBUG [org.mortbay.log] RESPONSE /img/fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg  200
+2011-04-06 14:47:02,847 DEBUG [org.mortbay.log] REQUEST /upvote/2 on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:02,849 INFO  [clojure.core] Otter1 = 1 ; Otter2 = 1 ; {3 "2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg", 2 "fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg", 1 "a56fdb74-a3e7-41f0-917f-40449e16f646.jpg"}
+2011-04-06 14:47:02,852 DEBUG [org.mortbay.log] RESPONSE /upvote/2  200
+2011-04-06 14:47:02,859 DEBUG [org.mortbay.log] REQUEST /img/a56fdb74-a3e7-41f0-917f-40449e16f646.jpg on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:02,863 DEBUG [org.mortbay.log] RESPONSE /img/a56fdb74-a3e7-41f0-917f-40449e16f646.jpg  200
+2011-04-06 14:47:03,791 DEBUG [org.mortbay.log] REQUEST /upvote/1 on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:03,793 INFO  [clojure.core] Otter1 = 1 ; Otter2 = 3 ; {3 "2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg", 2 "fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg", 1 "a56fdb74-a3e7-41f0-917f-40449e16f646.jpg"}
+2011-04-06 14:47:03,794 DEBUG [org.mortbay.log] RESPONSE /upvote/1  200
+2011-04-06 14:47:03,802 DEBUG [org.mortbay.log] REQUEST /img/a56fdb74-a3e7-41f0-917f-40449e16f646.jpg on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:03,805 DEBUG [org.mortbay.log] REQUEST /img/2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg on org.mortbay.jetty.HttpConnection@13f002ee
+2011-04-06 14:47:03,807 DEBUG [org.mortbay.log] RESPONSE /img/2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg  200
+2011-04-06 14:47:03,808 DEBUG [org.mortbay.log] RESPONSE /img/a56fdb74-a3e7-41f0-917f-40449e16f646.jpg  200
+2011-04-06 14:47:05,607 DEBUG [org.mortbay.log] REQUEST /upvote/3 on org.mortbay.jetty.HttpConnection@13f002ee
+2011-04-06 14:47:05,610 INFO  [clojure.core] Otter1 = 2 ; Otter2 = 2 ; {3 "2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg", 2 "fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg", 1 "a56fdb74-a3e7-41f0-917f-40449e16f646.jpg"}
+2011-04-06 14:47:05,611 DEBUG [org.mortbay.log] RESPONSE /upvote/3  200
+2011-04-06 14:47:05,620 DEBUG [org.mortbay.log] REQUEST /img/fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:05,623 DEBUG [org.mortbay.log] RESPONSE /img/fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg  200
+2011-04-06 14:47:06,375 DEBUG [org.mortbay.log] REQUEST /upvote/2 on org.mortbay.jetty.HttpConnection@13f002ee
+2011-04-06 14:47:06,377 INFO  [clojure.core] Otter1 = 1 ; Otter2 = 1 ; {3 "2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg", 2 "fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg", 1 "a56fdb74-a3e7-41f0-917f-40449e16f646.jpg"}
+2011-04-06 14:47:06,378 DEBUG [org.mortbay.log] RESPONSE /upvote/2  200
+2011-04-06 14:47:06,387 DEBUG [org.mortbay.log] REQUEST /img/a56fdb74-a3e7-41f0-917f-40449e16f646.jpg on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:06,391 DEBUG [org.mortbay.log] RESPONSE /img/a56fdb74-a3e7-41f0-917f-40449e16f646.jpg  200
+2011-04-06 14:47:06,919 DEBUG [org.mortbay.log] REQUEST /upvote/1 on org.mortbay.jetty.HttpConnection@13f002ee
+2011-04-06 14:47:06,921 INFO  [clojure.core] Otter1 = 3 ; Otter2 = 1 ; {3 "2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg", 2 "fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg", 1 "a56fdb74-a3e7-41f0-917f-40449e16f646.jpg"}
+2011-04-06 14:47:06,922 DEBUG [org.mortbay.log] RESPONSE /upvote/1  200
+2011-04-06 14:47:06,930 DEBUG [org.mortbay.log] REQUEST /img/2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:06,931 DEBUG [org.mortbay.log] REQUEST /img/a56fdb74-a3e7-41f0-917f-40449e16f646.jpg on org.mortbay.jetty.HttpConnection@13f002ee
+2011-04-06 14:47:06,932 DEBUG [org.mortbay.log] RESPONSE /img/2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg  200
+2011-04-06 14:47:06,935 DEBUG [org.mortbay.log] RESPONSE /img/a56fdb74-a3e7-41f0-917f-40449e16f646.jpg  200
+2011-04-06 14:47:07,439 DEBUG [org.mortbay.log] REQUEST /upvote/1 on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:07,441 INFO  [clojure.core] Otter1 = 1 ; Otter2 = 2 ; {3 "2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg", 2 "fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg", 1 "a56fdb74-a3e7-41f0-917f-40449e16f646.jpg"}
+2011-04-06 14:47:07,442 DEBUG [org.mortbay.log] RESPONSE /upvote/1  200
+2011-04-06 14:47:07,450 DEBUG [org.mortbay.log] REQUEST /img/a56fdb74-a3e7-41f0-917f-40449e16f646.jpg on org.mortbay.jetty.HttpConnection@13f002ee
+2011-04-06 14:47:07,451 DEBUG [org.mortbay.log] REQUEST /img/fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:07,454 DEBUG [org.mortbay.log] RESPONSE /img/fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg  200
+2011-04-06 14:47:07,457 DEBUG [org.mortbay.log] RESPONSE /img/a56fdb74-a3e7-41f0-917f-40449e16f646.jpg  200
+2011-04-06 14:47:07,975 DEBUG [org.mortbay.log] REQUEST /upvote/1 on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:07,977 INFO  [clojure.core] Otter1 = 2 ; Otter2 = 3 ; {3 "2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg", 2 "fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg", 1 "a56fdb74-a3e7-41f0-917f-40449e16f646.jpg"}
+2011-04-06 14:47:07,978 DEBUG [org.mortbay.log] RESPONSE /upvote/1  200
+2011-04-06 14:47:07,985 DEBUG [org.mortbay.log] REQUEST /img/fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg on org.mortbay.jetty.HttpConnection@13f002ee
+2011-04-06 14:47:07,986 DEBUG [org.mortbay.log] REQUEST /img/2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:07,987 DEBUG [org.mortbay.log] RESPONSE /img/2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg  200
+2011-04-06 14:47:07,988 DEBUG [org.mortbay.log] RESPONSE /img/fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg  200
+2011-04-06 14:47:08,495 DEBUG [org.mortbay.log] REQUEST /upvote/3 on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:08,497 INFO  [clojure.core] Otter1 = 1 ; Otter2 = 2 ; {3 "2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg", 2 "fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg", 1 "a56fdb74-a3e7-41f0-917f-40449e16f646.jpg"}
+2011-04-06 14:47:08,498 DEBUG [org.mortbay.log] RESPONSE /upvote/3  200
+2011-04-06 14:47:08,505 DEBUG [org.mortbay.log] REQUEST /img/a56fdb74-a3e7-41f0-917f-40449e16f646.jpg on org.mortbay.jetty.HttpConnection@13f002ee
+2011-04-06 14:47:08,506 DEBUG [org.mortbay.log] REQUEST /img/fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:08,509 DEBUG [org.mortbay.log] RESPONSE /img/fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg  200
+2011-04-06 14:47:08,509 DEBUG [org.mortbay.log] RESPONSE /img/a56fdb74-a3e7-41f0-917f-40449e16f646.jpg  200
+2011-04-06 14:47:09,223 DEBUG [org.mortbay.log] REQUEST /upvote/1 on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:09,225 INFO  [clojure.core] Otter1 = 2 ; Otter2 = 2 ; {3 "2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg", 2 "fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg", 1 "a56fdb74-a3e7-41f0-917f-40449e16f646.jpg"}
+2011-04-06 14:47:09,226 DEBUG [org.mortbay.log] RESPONSE /upvote/1  200
+2011-04-06 14:47:09,235 DEBUG [org.mortbay.log] REQUEST /img/fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg on org.mortbay.jetty.HttpConnection@13f002ee
+2011-04-06 14:47:09,238 DEBUG [org.mortbay.log] RESPONSE /img/fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg  200
+2011-04-06 14:47:09,815 DEBUG [org.mortbay.log] REQUEST /upvote/2 on org.mortbay.jetty.HttpConnection@50e63ee
+2011-04-06 14:47:09,817 INFO  [clojure.core] Otter1 = 1 ; Otter2 = 1 ; {3 "2411c674-a5eb-461d-99ff-c660c1fe6b2a.jpg", 2 "fef9ca6a-2a1e-488b-8596-1d48bd579a35.jpg", 1 "a56fdb74-a3e7-41f0-917f-40449e16f646.jpg"}
+2011-04-06 14:47:09,818 DEBUG [org.mortbay.log] RESPONSE /upvote/2  200
+2011-04-06 14:47:09,828 DEBUG [org.mortbay.log] REQUEST /img/a56fdb74-a3e7-41f0-917f-40449e16f646.jpg on org.mortbay.jetty.HttpConnection@13f002ee
+2011-04-06 14:47:09,831 DEBUG [org.mortbay.log] RESPONSE /img/a56fdb74-a3e7-41f0-917f-40449e16f646.jpg  200
+2011-04-06 14:49:17,639 DEBUG [org.mortbay.log] EOF
+2011-04-06 14:49:17,639 DEBUG [org.mortbay.log] EOF
+2011-04-06 16:05:47,432 DEBUG [org.mortbay.log] REQUEST /upload on org.mortbay.jetty.HttpConnection@1d2ab9ab
+2011-04-06 16:05:47,527 DEBUG [org.mortbay.log] RESPONSE /upload  500
+2011-04-06 16:06:43,270 DEBUG [org.mortbay.log] REQUEST /upload on org.mortbay.jetty.HttpConnection@1d2ab9ab
+2011-04-06 16:06:43,327 DEBUG [org.mortbay.log] RESPONSE /upload  200
+2011-04-06 16:08:47,665 DEBUG [org.mortbay.log] EOF

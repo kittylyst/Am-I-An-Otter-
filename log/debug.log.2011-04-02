@@ -1,0 +1,13 @@
+2011-04-02 23:05:38,974 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@262d2c7d
+2011-04-02 23:05:38,976 INFO  [clojure.core] Otter1 = 1 ; Otter2 = 1
+2011-04-02 23:05:38,976 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-04-02 23:05:38,977 DEBUG [org.mortbay.log] EOF
+2011-04-02 23:05:39,656 DEBUG [org.mortbay.log] REQUEST /img/1 on org.mortbay.jetty.HttpConnection@6f0b401e
+2011-04-02 23:05:39,658 DEBUG [org.mortbay.log] RESPONSE /img/1  404
+2011-04-02 23:05:39,835 DEBUG [org.mortbay.log] EOF
+2011-04-02 23:05:41,076 DEBUG [org.mortbay.log] REQUEST /favicon.ico on org.mortbay.jetty.HttpConnection@5c9fd14a
+2011-04-02 23:05:41,077 DEBUG [org.mortbay.log] RESPONSE /favicon.ico  404
+2011-04-02 23:05:41,078 DEBUG [org.mortbay.log] EOF
+2011-04-02 23:05:42,207 DEBUG [org.mortbay.log] REQUEST /favicon.ico on org.mortbay.jetty.HttpConnection@5969b696
+2011-04-02 23:05:42,208 DEBUG [org.mortbay.log] RESPONSE /favicon.ico  404
+2011-04-02 23:05:42,209 DEBUG [org.mortbay.log] EOF
