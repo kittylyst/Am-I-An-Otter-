@@ -6,10 +6,11 @@
 
 
 (import '(java.nio.file AccessDeniedException FileSystems FileVisitResult Files Path Paths PathMatcher SimpleFileVisitor))
+(import '(java.io File))
 
 (def otter-img-dir "resources/public/img/")
+(def otter-img-dir-fq (.getAbsolutePath (File. ".")))
 
-(def otter-img-dir-fq "/home/bje/projects/am-i-an-otter/resources/public/img")
 
 ; Instead of starting with an empty map should scan the disk and see what's there at startup
 ; The next few functions work towards that goal
@@ -18,7 +19,6 @@
 
 ; Returns the trimmed filename, if it matches using the matcher 
 (defn file-find [file matcher] (let [fname (.getName file (- (.getNameCount file) 1)) my-matcher matcher] 
-	(.info (get-logger) (str "Accessing file " fname))
   (if (and (not (nil? fname)) (.matches matcher fname))
     ; This is (toString) to allow the :img tags to work properly
     (.toString fname)
@@ -37,11 +37,11 @@
 (defn make-scanner [pattern file-map-r] (let [matcher (make-matcher pattern)]
   (proxy [SimpleFileVisitor] []
     (visitFile [file attribs] (let [my-file file, my-attrs attribs, file-name (file-find my-file matcher)]
-      (.info (get-logger) (str "Return from file-find " file-name))      
+      (.debug (get-logger) (str "Return from file-find " file-name))      
       (if (not (nil? file-name)) 
         (dosync (alter file-map-r alter-file-map file-name) file-map-r)
         nil)        
-      (.info (get-logger) (str "After return from file-find " @file-map-r))
+      (.debug (get-logger) (str "After return from file-find " @file-map-r))
       FileVisitResult/CONTINUE))
     
     (visitFileFailed [file exc] (let [my-file file my-ex exc]
@@ -72,7 +72,7 @@
 
 (defn upload-otter [req]
   (let [new-id (next-map-id otter-pics), new-name (str (java.util.UUID/randomUUID) ".jpg"), tmp-file (:tempfile (get (:multipart-params req) "file"))]
-       (.info (get-logger) (str (.toString req) " ; New name = " new-name " ; New id = " new-id))
+       (.debug (get-logger) (str (.toString req) " ; New name = " new-name " ; New id = " new-id))
        (ds/copy tmp-file (ds/file-str (str otter-img-dir new-name)))
        (def otter-pics (assoc otter-pics new-id new-name))
-       (str "<h1>Otter Uploaded!</h1>")))
+       (html [:h1 "Otter Uploaded!"])))
