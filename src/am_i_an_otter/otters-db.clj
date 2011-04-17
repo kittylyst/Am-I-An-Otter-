@@ -9,8 +9,7 @@
 (import '(java.io File))
 
 (def otter-img-dir "resources/public/img/")
-(def otter-img-dir-fq (.getAbsolutePath (File. ".")))
-
+(def otter-img-dir-fq (str (.getAbsolutePath (File. ".")) "/" otter-img-dir))
 
 ; Instead of starting with an empty map should scan the disk and see what's there at startup
 ; The next few functions work towards that goal
