@@ -79,8 +79,10 @@
 (defn random-otter [] (rand-nth (keys otter-pics)))
 
 (defn upload-otter [req]
-  (let [new-id (next-map-id otter-pics), new-name (str (java.util.UUID/randomUUID) ".jpg"), tmp-file (:tempfile (get (:multipart-params req) "file"))]
-       (.debug (get-logger) (str (.toString req) " ; New name = " new-name " ; New id = " new-id))
-       (ds/copy tmp-file (ds/file-str (str otter-img-dir new-name)))
-       (def otter-pics (assoc otter-pics new-id new-name))
-       (html [:h1 "Otter Uploaded!"])))
+  (let [new-id (next-map-id otter-pics)
+        new-name (str (java.util.UUID/randomUUID) ".jpg")
+        tmp-file (:tempfile (get (:multipart-params req) "file"))]
+    (.debug (get-logger) (str (.toString req) " ; New name = " new-name " ; New id = " new-id))
+    (ds/copy tmp-file (ds/file-str (str otter-img-dir new-name)))
+    (def otter-pics (assoc otter-pics new-id new-name))
+    (html [:h1 "Otter Uploaded!"])))
