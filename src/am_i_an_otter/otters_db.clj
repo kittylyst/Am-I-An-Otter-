@@ -1,12 +1,11 @@
-(ns am-i-an-otter.core
-  (:use compojure.core)
-  (:use hiccup.core)
+(ns am-i-an-otter.otters-db
+  (:use compojure.core
+        hiccup.core)
   (:require (clojure.contrib [sql :as sql])
-            (clojure.contrib [duck-streams :as ds])))
-
-
-(import '(java.nio.file AccessDeniedException FileSystems FileVisitResult Files Path Paths PathMatcher SimpleFileVisitor))
-(import '(java.io File))
+            (clojure.contrib [duck-streams :as ds])
+            (clojure.contrib [logging :as log]))
+  (:import (java.nio.file AccessDeniedException FileSystems FileVisitResult Files Path Paths PathMatcher SimpleFileVisitor)
+           (java.io File)))
 
 (def otter-img-dir "resources/public/img/")
 (def otter-img-dir-fq (str (.getAbsolutePath (File. ".")) "/" otter-img-dir))
@@ -36,22 +35,21 @@
 (defn make-scanner [pattern file-map-r] (let [matcher (make-matcher pattern)]
   (proxy [SimpleFileVisitor] []
     (visitFile [file attribs] (let [my-file file, my-attrs attribs, file-name (file-find my-file matcher)]
-      (.debug (get-logger) (str "Return from file-find " file-name))      
+      (log/debug (str "Return from file-find " file-name))      
       (if (not (nil? file-name)) 
         (dosync (alter file-map-r alter-file-map file-name) file-map-r)
         nil)        
-      (.debug (get-logger) (str "After return from file-find " @file-map-r))
+      (log/debug (str "After return from file-find " @file-map-r))
       FileVisitResult/CONTINUE))
     
     (visitFileFailed [file exc] (let [my-file file my-ex exc]
-      (.info (get-logger) (str "Failed to access file " my-file " ; Exception: " my-ex))
+      (log/info (str "Failed to access file " my-file " ; Exception: " my-ex))
       FileVisitResult/CONTINUE)))))
 
 ; Files.walkFileTree(startingDir, finder);
 (defn scan-for-otters [file-map] (let [my-map file-map]
   (Files/walkFileTree (Paths/get otter-img-dir-fq (into-array String [])) (make-scanner "*.jpg" my-map))
-  my-map
-  ))
+  my-map))
 
 ; otter-pics maps integer ids to filenames
 (def otter-pics (deref (scan-for-otters (ref {}))))
@@ -70,9 +68,9 @@
 (defn upvote-otter [id]
   (if (otter-exists id) 
     (let [my-id id]
-      (.info (get-logger) (str "Upvoted Otter " my-id)) 
+      (log/info (str "Upvoted Otter " my-id)) 
       (dosync (alter otter-votes-r alter-otter-upvote my-id) otter-votes-r))
-    (.info (get-logger) (str "Otter " id " Not Found " otter-pics))))
+    (log/info  (str "Otter " id " Not Found " otter-pics))))
 
 ; Function returns a random id for an otter
 (defn random-otter [] (rand-nth (keys otter-pics)))
@@ -81,7 +79,7 @@
   (let [new-id (next-map-id otter-pics)
         new-name (str (java.util.UUID/randomUUID) ".jpg")
         tmp-file (:tempfile (get (:multipart-params req) "file"))]
-    (.debug (get-logger) (str (.toString req) " ; New name = " new-name " ; New id = " new-id))
+    (log/debug  (str (.toString req) " ; New name = " new-name " ; New id = " new-id))
     (ds/copy tmp-file (ds/file-str (str otter-img-dir new-name)))
     (def otter-pics (assoc otter-pics new-id new-name))
     (html [:h1 "Otter Uploaded!"])))

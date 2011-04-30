@@ -1,17 +1,10 @@
 (ns am-i-an-otter.core
-  (:use compojure.core)
+  (:use compojure.core
+        am-i-an-otter.otters-db
+        am-i-an-otter.otters)
   (:require [compojure.route :as route]
             [compojure.handler :as handler]
-            [ring.middleware.multipart-params :as mp]
-            ))
-
-(load "imports")
-
-; Load the DB and filesystem manipulation functions 
-(load "otters-db")
-
-; Load the main page functions from the classpath
-(load "otters")
+            [ring.middleware.multipart-params :as mp]))
 
 ; Set up the routes - ie URL -> function mappings for the main pages 
 (defroutes main-routes
@@ -28,5 +21,4 @@
   (route/not-found "Page not found"))
 
 (def app
-  (handler/site main-routes)
-)
+  (handler/site main-routes))

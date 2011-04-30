@@ -1,10 +1,12 @@
-(ns am-i-an-otter.core
-  (:use compojure.core)
-  (:use hiccup.core))
+(ns am-i-an-otter.otters
+  (:use compojure.core
+        hiccup.core
+        am-i-an-otter.otters-db)
+  (:require [clojure.contrib.logging :as log]))
 
 ; Main page for comparing otters
 (defn page-compare-otters [] (let [otter1 (random-otter), otter2 (random-otter)]
-  (.info (get-logger) (str "Otter1 = " otter1 " ; Otter2 = " otter2 " ; " otter-pics))
+  (log/info (str "Otter1 = " otter1 " ; Otter2 = " otter2 " ; " otter-pics))
   (html [:h1 "Otters say 'Hello Compojure!'"] 
         [:p [:a {:href (str "/upvote/" otter1)} [:img {:src (str "/img/" (get otter-pics otter1))} ]]]
         [:p [:a {:href (str "/upvote/" otter2)} [:img {:src (str "/img/" (get otter-pics otter2))} ]]]
@@ -27,7 +29,7 @@
 ; Page for showing otter votes
 (defn page-otter-votes [] 
   (let []
-    (.info (get-logger) (str "Otters: " @otter-votes-r))
+    (log/info (str "Otters: " @otter-votes-r))
     (html [:h1 "Otter Votes" ]
           [:div#votes.otter-votes 
             (for [x (keys @otter-votes-r)] 
