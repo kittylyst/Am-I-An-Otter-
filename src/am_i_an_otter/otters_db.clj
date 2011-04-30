@@ -10,61 +10,70 @@
 (def otter-img-dir "resources/public/img/")
 (def otter-img-dir-fq (str (.getAbsolutePath (File. ".")) "/" otter-img-dir))
 
-; Instead of starting with an empty map should scan the disk and see what's there at startup
-; The next few functions work towards that goal
+;; Instead of starting with an empty map should scan the disk and see what's there at startup
+;; The next few functions work towards that goal
 
-(defn make-matcher [pattern] (.getPathMatcher (FileSystems/getDefault) (str "glob:" pattern)))
+(defn make-matcher [pattern]
+  (.getPathMatcher (FileSystems/getDefault) (str "glob:" pattern)))
 
-; Returns the trimmed filename, if it matches using the matcher 
-(defn file-find [file matcher] (let [fname (.getName file (- (.getNameCount file) 1)) my-matcher matcher] 
-  (if (and (not (nil? fname)) (.matches matcher fname))
-    ; This is (toString) to allow the :img tags to work properly
-    (.toString fname)
-    nil)))
+;; Returns the trimmed filename, if it matches using the matcher 
+(defn file-find [file matcher]
+  (let [fname (.getName file (- (.getNameCount file) 1))
+        my-matcher matcher] 
+    (if (and (not (nil? fname)) (.matches matcher fname))
+      ;; This is (toString) to allow the :img tags to work properly
+      (.toString fname)
+      nil)))
 
-; Gets the next id for a map keyed on id numbers (eg the otters)
-(defn next-map-id [map-with-id] (+ 1 (nth (max (let [map-ids (keys map-with-id)] 
-                                (if (nil? map-ids)
-                                  [0]
-                                  map-ids))) 0 )))
+;; Gets the next id for a map keyed on id numbers (eg the otters)
+(defn next-map-id [map-with-id]
+  (+ 1 (nth (max (let [map-ids (keys map-with-id)] (if (nil? map-ids) [0] map-ids))) 0 )))
 
-; Ref-alter function for adding a filename to the file map
-(defn alter-file-map [file-map fname] (assoc file-map (next-map-id file-map) fname))
+;; Ref-alter function for adding a filename to the file map
+(defn alter-file-map [file-map fname]
+  (assoc file-map (next-map-id file-map) fname))
 
-; Define the file scanner proxy
-(defn make-scanner [pattern file-map-r] (let [matcher (make-matcher pattern)]
-  (proxy [SimpleFileVisitor] []
-    (visitFile [file attribs] (let [my-file file, my-attrs attribs, file-name (file-find my-file matcher)]
-      (log/debug (str "Return from file-find " file-name))      
-      (if (not (nil? file-name)) 
-        (dosync (alter file-map-r alter-file-map file-name) file-map-r)
-        nil)        
-      (log/debug (str "After return from file-find " @file-map-r))
-      FileVisitResult/CONTINUE))
-    
-    (visitFileFailed [file exc] (let [my-file file my-ex exc]
-      (log/info (str "Failed to access file " my-file " ; Exception: " my-ex))
-      FileVisitResult/CONTINUE)))))
+;; Define the file scanner proxy
+(defn make-scanner [pattern file-map-r]
+  (let [matcher (make-matcher pattern)]
+    (proxy [SimpleFileVisitor] []
+      (visitFile [file attribs]
+                 (let [my-file file
+                       my-attrs attribs
+                       file-name (file-find my-file matcher)]
+                   (log/debug (str "Return from file-find " file-name))      
+                   (if (not (nil? file-name)) 
+                     (dosync (alter file-map-r alter-file-map file-name) file-map-r)
+                     nil)        
+                   (log/debug (str "After return from file-find " @file-map-r))
+                   FileVisitResult/CONTINUE))
+                                            
+      (visitFileFailed [file exc]
+                       (let [my-file file my-ex exc]
+                         (log/info (str "Failed to access file " my-file " ; Exception: " my-ex))
+                         FileVisitResult/CONTINUE)))))
 
-; Files.walkFileTree(startingDir, finder);
-(defn scan-for-otters [file-map] (let [my-map file-map]
-  (Files/walkFileTree (Paths/get otter-img-dir-fq (into-array String [])) (make-scanner "*.jpg" my-map))
-  my-map))
+;; Files.walkFileTree(startingDir, finder);
+(defn scan-for-otters [file-map]
+  (let [my-map file-map]
+    (Files/walkFileTree (Paths/get otter-img-dir-fq (into-array String [])) (make-scanner "*.jpg" my-map))
+    my-map))
 
-; otter-pics maps integer ids to filenames
+;; otter-pics maps integer ids to filenames
 (def otter-pics (deref (scan-for-otters (ref {}))))
 
-; otter-votes stores the votes
+;; otter-votes stores the votes
 (def otter-votes-r (ref {}))
 
-(defn otter-exists [id] (contains? (set (keys otter-pics)) id))
+(defn otter-exists [id]
+  (contains? (set (keys otter-pics)) id))
 
-; Votes up an otter
+;; Votes up an otter
 (defn alter-otter-upvote [vote-map id] 
   (assoc vote-map id (+ 1 (let [cur-votes (get vote-map id)]
-    (if (nil? cur-votes) 0 cur-votes)))))
+                            (if (nil? cur-votes) 0 cur-votes)))))
 
-; Fn for upvoting an otter in the DB
+;; Fn for upvoting an otter in the DB
 (defn upvote-otter [id]
   (if (otter-exists id) 
     (let [my-id id]
@@ -72,8 +81,9 @@
       (dosync (alter otter-votes-r alter-otter-upvote my-id) otter-votes-r))
     (log/info  (str "Otter " id " Not Found " otter-pics))))
 
-; Function returns a random id for an otter
-(defn random-otter [] (rand-nth (keys otter-pics)))
+;; Function returns a random id for an otter
+(defn random-otter []
+  (rand-nth (keys otter-pics)))
 
 (defn upload-otter [req]
   (let [new-id (next-map-id otter-pics)
