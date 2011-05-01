@@ -10,7 +10,8 @@
                  [org.slf4j/slf4j-api "1.5.6"]
                  [org.slf4j/slf4j-log4j12 "1.5.6"]
                  [hiccup "0.3.4"]]
-  :dev-dependencies [[lein-ring "0.4.0"]]
+  :dev-dependencies [[lein-ring "0.4.0"]
+                     [swank-clojure "1.3.0"]]
   ;:source-path "src"
   :repl-init am-i-an-otter.core
   :ring {:handler am-i-an-otter.core/app})
