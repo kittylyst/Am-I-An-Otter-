@@ -1,66 +1,29 @@
 (ns am-i-an-otter.otters-db
-  (:use compojure.core
+  (:use clojure.java.io
+        compojure.core
         hiccup.core)
-  (:require (clojure.contrib [sql :as sql])
-            (clojure.contrib [duck-streams :as ds])
+  (:require (clojure.contrib [duck-streams :as ds])
             (clojure.contrib [logging :as log]))
-  (:import (java.nio.file AccessDeniedException FileSystems FileVisitResult Files Path Paths PathMatcher SimpleFileVisitor)
-           (java.io File)))
+  (:import (java.io File)))
 
 (def otter-img-dir "resources/public/img/")
-(def otter-img-dir-fq (str (.getAbsolutePath (File. ".")) "/" otter-img-dir))
+(def otter-img-dir-fq (str (.getAbsolutePath (file ".")) "/" otter-img-dir))
 
 ;; Instead of starting with an empty map should scan the disk and see what's there at startup
 ;; The next few functions work towards that goal
-
-(defn make-matcher [pattern]
-  (.getPathMatcher (FileSystems/getDefault) (str "glob:" pattern)))
-
-;; Returns the trimmed filename, if it matches using the matcher 
-(defn file-find [file matcher]
-  (let [fname (.getName file (- (.getNameCount file) 1))
-        my-matcher matcher] 
-    (if (and (not (nil? fname)) (.matches matcher fname))
-      ;; This is (toString) to allow the :img tags to work properly
-      (.toString fname)
-      nil)))
 
 ;; Gets the next id for a map keyed on id numbers (eg the otters)
 (defn next-map-id [map-with-id]
   (+ 1 (nth (max (let [map-ids (keys map-with-id)] (if (nil? map-ids) [0] map-ids))) 0 )))
 
-;; Ref-alter function for adding a filename to the file map
-(defn alter-file-map [file-map fname]
-  (assoc file-map (next-map-id file-map) fname))
-
-;; Define the file scanner proxy
-(defn make-scanner [pattern file-map-r]
-  (let [matcher (make-matcher pattern)]
-    (proxy [SimpleFileVisitor] []
-      (visitFile [file attribs]
-                 (let [my-file file
-                       my-attrs attribs
-                       file-name (file-find my-file matcher)]
-                   (log/debug (str "Return from file-find " file-name))      
-                   (if (not (nil? file-name)) 
-                     (dosync (alter file-map-r alter-file-map file-name) file-map-r)
-                     nil)        
-                   (log/debug (str "After return from file-find " @file-map-r))
-                   FileVisitResult/CONTINUE))
-                                            
-      (visitFileFailed [file exc]
-                       (let [my-file file my-ex exc]
-                         (log/info (str "Failed to access file " my-file " ; Exception: " my-ex))
-                         FileVisitResult/CONTINUE)))))
-
-;; Files.walkFileTree(startingDir, finder);
-(defn scan-for-otters [file-map]
-  (let [my-map file-map]
-    (Files/walkFileTree (Paths/get otter-img-dir-fq (into-array String [])) (make-scanner "*.jpg" my-map))
-    my-map))
+(defn scan-for-otters []
+  (let [files (map #(.getName %) (file-seq (file otter-img-dir-fq)))
+           jpegs (filter #(re-matches #".*jpe?g$" %) files)
+           jpeg-count (count jpegs)]
+    (zipmap (range jpeg-count) jpegs)))
 
 ;; otter-pics maps integer ids to filenames
-(def otter-pics (deref (scan-for-otters (ref {}))))
+(def otter-pics (scan-for-otters))
 
 ;; otter-votes stores the votes
 (def otter-votes-r (ref {}))
@@ -85,6 +48,7 @@
 (defn random-otter []
   (rand-nth (keys otter-pics)))
 
+;; FIXME - otter pics should be a ref or atom
 (defn upload-otter [req]
   (let [new-id (next-map-id otter-pics)
         new-name (str (java.util.UUID/randomUUID) ".jpg")
