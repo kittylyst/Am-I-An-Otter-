@@ -15,7 +15,7 @@
 
   ;; This is the file uploader
   (mp/wrap-multipart-params
-   (POST "/add_otter" req (str (upload-otter req) (page-start-upload-otter))))
+   (POST "/add_otter" req (str (upload-otter! req) (page-start-upload-otter))))
   
   (route/resources "/")
   (route/not-found "Page not found"))
