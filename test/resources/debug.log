@@ -1,0 +1,85 @@
+2011-07-22 11:34:20,508 INFO  [org.mortbay.log] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2011-07-22 11:34:20,513 DEBUG [org.mortbay.log] Container Server@f36d42c + SocketConnector@0.0.0.0:3000 as connector
+2011-07-22 11:34:20,515 DEBUG [org.mortbay.log] Container Server@f36d42c + AbstractHandler$0@5d78069d as handler
+2011-07-22 11:34:20,515 INFO  [org.mortbay.log] jetty-6.1.26
+2011-07-22 11:34:20,556 DEBUG [org.mortbay.log] Container Server@f36d42c + org.mortbay.thread.QueuedThreadPool@4bf4e4c0 as threadpool
+2011-07-22 11:34:20,564 DEBUG [org.mortbay.log] started org.mortbay.thread.QueuedThreadPool@4bf4e4c0
+2011-07-22 11:34:20,565 DEBUG [org.mortbay.log] starting AbstractHandler$0@5d78069d
+2011-07-22 11:34:20,565 DEBUG [org.mortbay.log] started AbstractHandler$0@5d78069d
+2011-07-22 11:34:20,566 DEBUG [org.mortbay.log] starting Server@f36d42c
+2011-07-22 11:34:20,573 INFO  [org.mortbay.log] Started SocketConnector@0.0.0.0:3000
+2011-07-22 11:34:20,573 DEBUG [org.mortbay.log] started SocketConnector@0.0.0.0:3000
+2011-07-22 11:34:20,574 DEBUG [org.mortbay.log] started Server@f36d42c
+2011-07-22 11:34:21,725 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@221dc7b3
+2011-07-22 11:34:21,756 INFO  [am-i-an-otter.otters] Otter1 =  ; Otter2 =  ; {}
+2011-07-22 11:34:21,780 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-07-22 11:34:32,198 DEBUG [org.mortbay.log] EOF
+2011-07-22 11:34:32,268 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@783316b4
+2011-07-22 11:34:32,270 INFO  [am-i-an-otter.otters] Otter1 =  ; Otter2 =  ; {}
+2011-07-22 11:34:32,271 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-07-22 11:34:32,409 DEBUG [org.mortbay.log] REQUEST /img/ on org.mortbay.jetty.HttpConnection@783316b4
+2011-07-22 11:34:32,415 DEBUG [org.mortbay.log] RESPONSE /img/  404
+2011-07-22 11:34:32,492 DEBUG [org.mortbay.log] REQUEST /favicon.ico on org.mortbay.jetty.HttpConnection@783316b4
+2011-07-22 11:34:32,495 DEBUG [org.mortbay.log] RESPONSE /favicon.ico  404
+2011-07-22 11:34:32,635 DEBUG [org.mortbay.log] REQUEST /favicon.ico on org.mortbay.jetty.HttpConnection@783316b4
+2011-07-22 11:34:32,638 DEBUG [org.mortbay.log] RESPONSE /favicon.ico  404
+2011-07-22 11:39:27,162 INFO  [org.mortbay.log] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2011-07-22 11:39:27,177 DEBUG [org.mortbay.log] Container Server@95973d + SocketConnector@0.0.0.0:3000 as connector
+2011-07-22 11:39:27,178 DEBUG [org.mortbay.log] Container Server@95973d + AbstractHandler$0@2e28dfb2 as handler
+2011-07-22 11:39:27,179 INFO  [org.mortbay.log] jetty-6.1.26
+2011-07-22 11:39:27,196 DEBUG [org.mortbay.log] Container Server@95973d + org.mortbay.thread.QueuedThreadPool@3f81be9 as threadpool
+2011-07-22 11:39:27,201 DEBUG [org.mortbay.log] started org.mortbay.thread.QueuedThreadPool@3f81be9
+2011-07-22 11:39:27,201 DEBUG [org.mortbay.log] starting AbstractHandler$0@2e28dfb2
+2011-07-22 11:39:27,202 DEBUG [org.mortbay.log] started AbstractHandler$0@2e28dfb2
+2011-07-22 11:39:27,202 DEBUG [org.mortbay.log] starting Server@95973d
+2011-07-22 11:39:27,210 INFO  [org.mortbay.log] Started SocketConnector@0.0.0.0:3000
+2011-07-22 11:39:27,211 DEBUG [org.mortbay.log] started SocketConnector@0.0.0.0:3000
+2011-07-22 11:39:27,211 DEBUG [org.mortbay.log] started Server@95973d
+2011-07-22 11:39:27,437 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@333815e0
+2011-07-22 11:39:27,496 INFO  [am-i-an-otter.otters] Otter1 =  ; Otter2 =  ; {}
+2011-07-22 11:39:27,518 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-07-22 11:42:35,267 INFO  [org.mortbay.log] Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2011-07-22 11:42:35,275 DEBUG [org.mortbay.log] Container Server@32defd4f + SocketConnector@0.0.0.0:3000 as connector
+2011-07-22 11:42:35,276 DEBUG [org.mortbay.log] Container Server@32defd4f + AbstractHandler$0@200b6145 as handler
+2011-07-22 11:42:35,276 INFO  [org.mortbay.log] jetty-6.1.26
+2011-07-22 11:42:35,289 DEBUG [org.mortbay.log] Container Server@32defd4f + org.mortbay.thread.QueuedThreadPool@6dd8ade8 as threadpool
+2011-07-22 11:42:35,291 DEBUG [org.mortbay.log] started org.mortbay.thread.QueuedThreadPool@6dd8ade8
+2011-07-22 11:42:35,291 DEBUG [org.mortbay.log] starting AbstractHandler$0@200b6145
+2011-07-22 11:42:35,292 DEBUG [org.mortbay.log] started AbstractHandler$0@200b6145
+2011-07-22 11:42:35,292 DEBUG [org.mortbay.log] starting Server@32defd4f
+2011-07-22 11:42:35,298 INFO  [org.mortbay.log] Started SocketConnector@0.0.0.0:3000
+2011-07-22 11:42:35,299 DEBUG [org.mortbay.log] started SocketConnector@0.0.0.0:3000
+2011-07-22 11:42:35,299 DEBUG [org.mortbay.log] started Server@32defd4f
+2011-07-22 11:42:35,432 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@48802d16
+2011-07-22 11:42:35,497 INFO  [am-i-an-otter.otters] Otter1 = 1 ; Otter2 = 4 ; {5 "edd4753b-7c49-4caf-bf3f-e29f155c6818.jpg", 4 "660bf3f8-0f8a-44a8-be1d-c4175301643e.jpg", 3 "6538acd4-62a0-4777-9e65-2efef131e4ad.jpg", 2 "493a5791-8f91-4679-94c0-899cee8b8627.jpg", 1 "40ee6471-0be1-4f2a-b1ba-29d560eec674.jpg", 0 "1e95bfd0-6118-476a-982c-dfad959f22c0.jpg"}
+2011-07-22 11:42:35,523 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-07-22 11:42:45,574 DEBUG [org.mortbay.log] EOF
+2011-07-22 11:42:46,409 DEBUG [org.mortbay.log] REQUEST / on org.mortbay.jetty.HttpConnection@44159d18
+2011-07-22 11:42:46,411 INFO  [am-i-an-otter.otters] Otter1 = 5 ; Otter2 = 3 ; {5 "edd4753b-7c49-4caf-bf3f-e29f155c6818.jpg", 4 "660bf3f8-0f8a-44a8-be1d-c4175301643e.jpg", 3 "6538acd4-62a0-4777-9e65-2efef131e4ad.jpg", 2 "493a5791-8f91-4679-94c0-899cee8b8627.jpg", 1 "40ee6471-0be1-4f2a-b1ba-29d560eec674.jpg", 0 "1e95bfd0-6118-476a-982c-dfad959f22c0.jpg"}
+2011-07-22 11:42:46,412 DEBUG [org.mortbay.log] RESPONSE /  200
+2011-07-22 11:42:46,437 DEBUG [org.mortbay.log] REQUEST /img/edd4753b-7c49-4caf-bf3f-e29f155c6818.jpg on org.mortbay.jetty.HttpConnection@44159d18
+2011-07-22 11:42:46,438 DEBUG [org.mortbay.log] REQUEST /img/6538acd4-62a0-4777-9e65-2efef131e4ad.jpg on org.mortbay.jetty.HttpConnection@3f0731e7
+2011-07-22 11:42:46,459 DEBUG [org.mortbay.log] RESPONSE /img/edd4753b-7c49-4caf-bf3f-e29f155c6818.jpg  200
+2011-07-22 11:42:46,459 DEBUG [org.mortbay.log] RESPONSE /img/6538acd4-62a0-4777-9e65-2efef131e4ad.jpg  200
+2011-07-22 11:42:53,599 DEBUG [org.mortbay.log] REQUEST /upvote/3 on org.mortbay.jetty.HttpConnection@3f0731e7
+2011-07-22 11:42:53,602 INFO  [am-i-an-otter.otters-db] Upvoted Otter 3
+2011-07-22 11:42:53,603 INFO  [am-i-an-otter.otters] Otter1 = 1 ; Otter2 = 4 ; {5 "edd4753b-7c49-4caf-bf3f-e29f155c6818.jpg", 4 "660bf3f8-0f8a-44a8-be1d-c4175301643e.jpg", 3 "6538acd4-62a0-4777-9e65-2efef131e4ad.jpg", 2 "493a5791-8f91-4679-94c0-899cee8b8627.jpg", 1 "40ee6471-0be1-4f2a-b1ba-29d560eec674.jpg", 0 "1e95bfd0-6118-476a-982c-dfad959f22c0.jpg"}
+2011-07-22 11:42:53,605 DEBUG [org.mortbay.log] RESPONSE /upvote/3  200
+2011-07-22 11:42:53,630 DEBUG [org.mortbay.log] REQUEST /img/40ee6471-0be1-4f2a-b1ba-29d560eec674.jpg on org.mortbay.jetty.HttpConnection@3f0731e7
+2011-07-22 11:42:53,630 DEBUG [org.mortbay.log] REQUEST /img/660bf3f8-0f8a-44a8-be1d-c4175301643e.jpg on org.mortbay.jetty.HttpConnection@44159d18
+2011-07-22 11:42:53,635 DEBUG [org.mortbay.log] RESPONSE /img/40ee6471-0be1-4f2a-b1ba-29d560eec674.jpg  200
+2011-07-22 11:42:53,635 DEBUG [org.mortbay.log] RESPONSE /img/660bf3f8-0f8a-44a8-be1d-c4175301643e.jpg  200
+2011-07-22 11:42:55,099 DEBUG [org.mortbay.log] REQUEST /upvote/1 on org.mortbay.jetty.HttpConnection@3f0731e7
+2011-07-22 11:42:55,101 INFO  [am-i-an-otter.otters-db] Upvoted Otter 1
+2011-07-22 11:42:55,102 INFO  [am-i-an-otter.otters] Otter1 = 4 ; Otter2 = 2 ; {5 "edd4753b-7c49-4caf-bf3f-e29f155c6818.jpg", 4 "660bf3f8-0f8a-44a8-be1d-c4175301643e.jpg", 3 "6538acd4-62a0-4777-9e65-2efef131e4ad.jpg", 2 "493a5791-8f91-4679-94c0-899cee8b8627.jpg", 1 "40ee6471-0be1-4f2a-b1ba-29d560eec674.jpg", 0 "1e95bfd0-6118-476a-982c-dfad959f22c0.jpg"}
+2011-07-22 11:42:55,103 DEBUG [org.mortbay.log] RESPONSE /upvote/1  200
+2011-07-22 11:42:55,125 DEBUG [org.mortbay.log] REQUEST /img/493a5791-8f91-4679-94c0-899cee8b8627.jpg on org.mortbay.jetty.HttpConnection@3f0731e7
+2011-07-22 11:42:55,130 DEBUG [org.mortbay.log] RESPONSE /img/493a5791-8f91-4679-94c0-899cee8b8627.jpg  200
+2011-07-22 11:43:00,730 DEBUG [org.mortbay.log] REQUEST /upvote/4 on org.mortbay.jetty.HttpConnection@3f0731e7
+2011-07-22 11:43:00,732 INFO  [am-i-an-otter.otters-db] Upvoted Otter 4
+2011-07-22 11:43:00,733 INFO  [am-i-an-otter.otters] Otter1 = 4 ; Otter2 = 0 ; {5 "edd4753b-7c49-4caf-bf3f-e29f155c6818.jpg", 4 "660bf3f8-0f8a-44a8-be1d-c4175301643e.jpg", 3 "6538acd4-62a0-4777-9e65-2efef131e4ad.jpg", 2 "493a5791-8f91-4679-94c0-899cee8b8627.jpg", 1 "40ee6471-0be1-4f2a-b1ba-29d560eec674.jpg", 0 "1e95bfd0-6118-476a-982c-dfad959f22c0.jpg"}
+2011-07-22 11:43:00,734 DEBUG [org.mortbay.log] RESPONSE /upvote/4  200
+2011-07-22 11:43:00,767 DEBUG [org.mortbay.log] REQUEST /img/1e95bfd0-6118-476a-982c-dfad959f22c0.jpg on org.mortbay.jetty.HttpConnection@3f0731e7
+2011-07-22 11:43:00,771 DEBUG [org.mortbay.log] RESPONSE /img/1e95bfd0-6118-476a-982c-dfad959f22c0.jpg  200
+2011-07-22 11:44:36,927 DEBUG [org.mortbay.log] EOF
+2011-07-22 11:44:37,479 DEBUG [org.mortbay.log] EOF
