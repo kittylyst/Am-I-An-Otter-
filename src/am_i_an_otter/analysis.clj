@@ -73,7 +73,12 @@
   (with-data (sel my-ds :filter  #(< (nth % 1) cutoff) )  
              (save (histogram :ptime :nbins 100 :title fname) (str fname "_" cutoff ".png"))))
 
+; TEST defs in case live demo has problems
+ (def test-ds (calc-response-times (build-map-http-entries "./test/resources/debug.log")))
+ (def image-regex (re-pattern ".*\\.jpg"))
+ (def vote-regex (re-pattern "/upvote/.*"))
+
 (defn save-detail-resp-regex [my-ds regex fname]
   (let [my-reg (re-pattern regex)]
-    (with-data (sel my-ds :filter  #((not (nil? (re-matches my-reg (nth % 0))))) )  
-               (save (histogram :ptime :nbins 100 :title fname) (str fname "_" cutoff ".png")))))
+    (with-data (sel my-ds :filter  #(not (nil? (re-matches my-reg (nth % 0)))) )  
+               (save (histogram :ptime :nbins 100 :title fname) fname))))
