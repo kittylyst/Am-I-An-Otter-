@@ -1,7 +1,7 @@
 (ns am-i-an-otter.analysis 
   (:use [clojure.contrib.io :only [reader]]))
 
-(use '(incanter core charts datasets io excel))
+(use '(incanter core charts stats io excel))
 
 (import '(java.text SimpleDateFormat))
 
@@ -62,3 +62,18 @@
 
 ; just the ptime vals ($ :ptime my-ds)
 
+(defn save-overall-resp [my-ds fname]
+  (with-data ($rollup mean :ptime :uri my-ds) (save (bar-chart :uri :ptime) (str fname ".png"))))
+
+(defn save-detail-resp [my-ds fname]
+  (with-data ($order :ptime :asc ($rollup #(.count %1) :count :ptime my-ds) )  
+             (save (bar-chart :ptime :count :x-label "Resp Time (ms)" :y-label "# Requests") (str fname ".png"))))
+
+(defn save-detail-resp-cutoff [my-ds cutoff fname]
+  (with-data (sel my-ds :filter  #(< (nth % 1) cutoff) )  
+             (save (histogram :ptime :nbins 100 :title fname) (str fname "_" cutoff ".png"))))
+
+(defn save-detail-resp-regex [my-ds regex fname]
+  (let [my-reg (re-pattern regex)]
+    (with-data (sel my-ds :filter  #((not (nil? (re-matches my-reg (nth % 0))))) )  
+               (save (histogram :ptime :nbins 100 :title fname) (str fname "_" cutoff ".png")))))
